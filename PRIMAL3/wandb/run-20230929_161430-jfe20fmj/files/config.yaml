@@ -1,0 +1,197 @@
+wandb_version: 1
+
+N_AGENTS:
+  desc: null
+  value: 8
+N_ACTIONS:
+  desc: null
+  value: 5
+EPISODE_LEN:
+  desc: null
+  value: 256
+FOV_SIZE:
+  desc: null
+  value: 7
+WORLD_SIZE:
+  desc: null
+  value:
+  - 10
+  - 40
+OBSTACLE_PROB:
+  desc: null
+  value:
+  - 0.0
+  - 0.5
+ACTION_COST:
+  desc: null
+  value: -0.3
+IDLE_COST:
+  desc: null
+  value: -0.3
+GOAL_REWARD:
+  desc: null
+  value: 0.0
+COLLISION_COST:
+  desc: null
+  value: -2
+BLOCKING_COST:
+  desc: null
+  value: -1
+lr:
+  desc: null
+  value: 1.0e-05
+GAMMA:
+  desc: null
+  value: 0.95
+LAM:
+  desc: null
+  value: 0.95
+CLIPRANGE:
+  desc: null
+  value: 0.2
+MAX_GRAD_NORM:
+  desc: null
+  value: 10
+ENTROPY_COEF:
+  desc: null
+  value: 0.01
+VALUE_COEF:
+  desc: null
+  value: 0.08
+POLICY_COEF:
+  desc: null
+  value: 10
+VALID_COEF:
+  desc: null
+  value: 0.5
+BLOCK_COEF:
+  desc: null
+  value: 0.5
+N_EPOCHS:
+  desc: null
+  value: 10
+N_ENVS:
+  desc: null
+  value: 16
+N_MAX_STEPS:
+  desc: null
+  value: 30000000.0
+N_STEPS:
+  desc: null
+  value: 1024
+MINIBATCH_SIZE:
+  desc: null
+  value: 1024
+DEMONSTRATION_PROB:
+  desc: null
+  value: 0.1
+NET_SIZE:
+  desc: null
+  value: 512
+NUM_CHANNEL:
+  desc: null
+  value: 4
+GOAL_REPR_SIZE:
+  desc: null
+  value: 12
+VECTOR_LEN:
+  desc: null
+  value: 4
+SEED:
+  desc: null
+  value: 1234
+USE_GPU_LOCAL:
+  desc: null
+  value: false
+USE_GPU_GLOBAL:
+  desc: null
+  value: true
+NUM_GPU:
+  desc: null
+  value: 1
+RETRAIN:
+  desc: null
+  value: false
+WANDB:
+  desc: null
+  value: true
+TENSORBOARD:
+  desc: null
+  value: true
+TXT_WRITER:
+  desc: null
+  value: true
+ENTITY:
+  desc: null
+  value: hanqi-zhao
+TIME:
+  desc: null
+  value: 29-09-231614
+EXPERIMENT_PROJECT:
+  desc: null
+  value: primal3
+EXPERIMENT_NAME:
+  desc: null
+  value: baseline
+EXPERIMENT_NOTE:
+  desc: null
+  value: PRIMAL1 written by torch and trained by PPO, stop penalty=0
+SAVE_INTERVAL:
+  desc: null
+  value: 500000.0
+BEST_INTERVAL:
+  desc: null
+  value: 0
+GIF_INTERVAL:
+  desc: null
+  value: 1000000.0
+EVAL_INTERVAL:
+  desc: null
+  value: 16384
+EVAL_EPISODES:
+  desc: null
+  value: 1
+RECORD_BEST:
+  desc: null
+  value: false
+MODEL_PATH:
+  desc: null
+  value: ./models/primal3/baseline29-09-231614
+GIFS_PATH:
+  desc: null
+  value: ./gifs/primal3/baseline29-09-231614
+SUMMARY_PATH:
+  desc: null
+  value: ./summaries/primal3/baseline29-09-231614
+TXT_NAME:
+  desc: null
+  value: alg.txt
+_wandb:
+  desc: null
+  value:
+    python_version: 3.6.13
+    cli_version: 0.15.11
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1695975270.256358
+    t:
+      1:
+      - 1
+      - 30
+      - 55
+      2:
+      - 1
+      - 30
+      - 55
+      3:
+      - 13
+      - 14
+      - 16
+      - 23
+      4: 3.6.13
+      5: 0.15.11
+      8:
+      - 3
+      - 5
+      13: windows-amd64

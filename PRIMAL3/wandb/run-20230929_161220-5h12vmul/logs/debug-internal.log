@@ -1,0 +1,50 @@
+2023-09-29 16:12:20,520 INFO    StreamThr :8196 [internal.py:wandb_internal():89] W&B internal server running at pid: 8196, started at: 2023-09-29 16:12:20.518451
+2023-09-29 16:12:20,522 DEBUG   HandlerThread:8196 [handler.py:handle_request():144] handle_request: status
+2023-09-29 16:12:20,545 INFO    WriterThread:8196 [datastore.py:open_for_write():85] open: C:\Users\NEMESIS\Documents\NUS\Final Year Project\PRIMAL3\wandb\run-20230929_161220-5h12vmul\run-5h12vmul.wandb
+2023-09-29 16:12:20,547 DEBUG   SenderThread:8196 [sender.py:send():380] send: header
+2023-09-29 16:12:20,548 DEBUG   SenderThread:8196 [sender.py:send():380] send: run
+2023-09-29 16:12:20,567 INFO    SenderThread:8196 [sender.py:_maybe_setup_resume():760] checking resume status for yutong/MAPF/5h12vmul
+2023-09-29 16:12:22,436 ERROR   SenderThread:8196 [internal_api.py:execute():369] 404 response executing GraphQL.
+2023-09-29 16:12:22,436 ERROR   SenderThread:8196 [internal_api.py:execute():370] {"errors":[{"message":"project not found","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2023-09-29 16:12:22,437 ERROR   SenderThread:8196 [sender.py:send_run():977] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+Traceback (most recent call last):
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\requests\models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\internal\sender.py", line 975, in send_run
+    self._init_run(run, config_value_dict)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\internal\sender.py", line 1027, in _init_run
+    commit=run.git.commit or None,
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 2011, in upsert_run
+    **kwargs,
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 341, in gql
+    **kwargs,
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\util.py", line 964, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "C:\Users\NEMESIS\Anaconda3\envs\PyTorch\lib\site-packages\wandb\util.py", line 907, in no_retry_auth
+    "It appears that you do not have permission to access the requested resource. "
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2023-09-29 16:12:22,623 DEBUG   HandlerThread:8196 [handler.py:handle_request():144] handle_request: shutdown
+2023-09-29 16:12:22,623 INFO    HandlerThread:8196 [handler.py:finish():844] shutting down handler
+2023-09-29 16:12:23,461 INFO    SenderThread:8196 [sender.py:finish():1534] shutting down sender
+2023-09-29 16:12:23,571 INFO    WriterThread:8196 [datastore.py:close():294] close: C:\Users\NEMESIS\Documents\NUS\Final Year Project\PRIMAL3\wandb\run-20230929_161220-5h12vmul\run-5h12vmul.wandb

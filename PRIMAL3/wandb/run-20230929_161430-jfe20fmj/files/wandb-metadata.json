@@ -1,0 +1,39 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.6.13",
+    "heartbeatAt": "2023-09-29T08:14:32.473705",
+    "startedAt": "2023-09-29T08:14:30.228780",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\NEMESIS\\Documents\\NUS\\Final Year Project\\PRIMAL3\\driver.py",
+    "codePathLocal": "driver.py",
+    "codePath": "driver.py",
+    "host": "DESKTOP-1A86NJ6",
+    "username": "NEMESIS",
+    "executable": "C:\\Users\\NEMESIS\\Anaconda3\\envs\\PyTorch\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1887.0,
+        "min": 0.0,
+        "max": 2301.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1887.0,
+            "min": 0.0,
+            "max": 2301.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.69140243530273,
+            "used": 406.9823913574219
+        }
+    },
+    "memory": {
+        "total": 15.355525970458984
+    }
+}
